@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Christopher De Vault — computer science portfolio."
+    />
+    <title>Christopher De Vault | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-stack" aria-hidden="true">
+      <div class="bg-slide active" data-panel="about"></div>
+      <div class="bg-slide" data-panel="skills"></div>
+      <div class="bg-slide" data-panel="projects"></div>
+      <div class="bg-slide" data-panel="contact"></div>
+    </div>
+
+    <nav class="top-nav" aria-label="Personal navigation">
+      <a class="top-nav-link" href="pages/now.html">Now</a>
+      <a class="top-nav-link" href="pages/writing.html">Writing</a>
+      <a class="top-nav-link" href="pages/music.html">Music</a>
+      <a class="top-nav-link" href="pages/reading.html">Reading</a>
+    </nav>
+
+    <nav class="sidebar-nav" aria-label="Section navigation">
+      <button type="button" class="nav-item active" data-panel="about">About</button>
+      <button type="button" class="nav-item" data-panel="skills">Skills</button>
+      <button type="button" class="nav-item" data-panel="projects">Projects</button>
+      <button type="button" class="nav-item" data-panel="contact">Contact</button>
+    </nav>
+
+    <main class="content-panel" id="content-panel">
+      <section class="panel active" id="about" data-panel="about" aria-labelledby="about-heading">
+        <img
+          class="profile-photo"
+          src="assets/profile.jpeg"
+          alt="Christopher De Vault"
+          width="461"
+          height="836"
+        />
+        <div class="panel-body">
+          <h2 class="panel-heading" id="about-heading">About</h2>
+          <p>
+            I am a recent computer science graduate from the University of Arizona. I build
+            software that spans <em>systems programming</em>, <em>database
+            engineering</em>, <em>language tooling</em>, and <em>machine
+            learning</em>.
+          </p>
+          <p>
+            I enjoy understanding how things work under the hood — from lexers and
+            page tables to normalized schemas and NLP pipelines. I care about clean
+            architecture, measurable results, and code you can actually read.
+          </p>
+          <h3 class="subheading">Featured Projects Scope</h3>
+          <ul>
+            <li>Compilers, parsers, and interpreter design</li>
+            <li>Operating systems and virtual memory</li>
+            <li>Relational databases and application backends</li>
+            <li>Natural language processing and text classification</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="skills" data-panel="skills" aria-labelledby="skills-heading" hidden>
+        <div class="panel-body panel-body--full">
+          <h2 class="panel-heading" id="skills-heading">Skills</h2>
+          <p>
+            Languages and tools from recent coursework and personal projects.
+          </p>
+          <h3 class="subheading">Languages</h3>
+          <ul>
+            <li>Go, C, Java, Python, SQL</li>
+          </ul>
+          <h3 class="subheading">Systems &amp; tools</h3>
+          <ul>
+            <li>Make, GCC, parsing &amp; ASTs, goroutines, Git, LaTeX</li>
+          </ul>
+          <h3 class="subheading">Data &amp; ML</h3>
+          <ul>
+            <li>Oracle DBMS, JDBC, scikit-learn, PyTorch, Transformers, Jupyter</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="projects" data-panel="projects" aria-labelledby="projects-heading" hidden>
+        <div class="panel-body">
+          <h2 class="panel-heading" id="projects-heading">Projects</h2>
+          <p>Selected work from my coding portfolio.</p>
+
+          <h3 class="subheading">
+            <a
+              href="https://github.com/cjdevault/Go-expression-parser"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Go Arithmetic Expression Parser &amp; Evaluator</a
+            >
+          </h3>
+          <ul>
+            <li>
+              Lexer → parser → AST → evaluator with REPL; recursive-descent
+              parsing and goroutine-based async evaluation.
+              <a href="coding portfolio/Go Parser/README.md">README</a>
+            </li>
+          </ul>
+
+          <h3 class="subheading">
+            <a
+              href="https://github.com/cjdevault/virtual-memory-simulator"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Virtual Memory Simulator (vmsim)</a
+            >
+          </h3>
+          <ul>
+            <li>
+              Demand-paging simulator comparing OPT, CLOCK, Rand, and NRU on
+              Valgrind traces.
+              <a href="coding portfolio/VM Simulator/README.md">README</a>
+            </li>
+          </ul>
+
+          <h3 class="subheading">
+            <a
+              href="https://github.com/cjdevault/Data-Warehouse-Relational-Database-Engineering-Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Oracle Database Engineering Project</a
+            >
+          </h3>
+          <ul>
+            <li>
+              Oracle-backed Java JDBC application with E-R design and normalized
+              schema.
+              <a href="coding portfolio/Database Design and Engineering/README.md">README</a>
+            </li>
+          </ul>
+
+          <h3 class="subheading">
+            <a
+              href="https://github.com/cjdevault/Large-Scale-NLP-Classification-Feature-Engineering-Pipeline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Large-Scale NLP Classification &amp; Feature Engineering Pipeline</a
+            >
+          </h3>
+          <ul>
+            <li>
+              TF-IDF and BERT features with Logistic Regression, Random Forest,
+              and SVM.
+              <a href="coding portfolio/NLP Classification/final_project.ipynb">Notebook</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="contact" data-panel="contact" aria-labelledby="contact-heading" hidden>
+        <div class="panel-body panel-body--full">
+          <h2 class="panel-heading" id="contact-heading">Contact</h2>
+          <p>
+            Open to internships, collaborations, and interesting problems. Reach out
+            by email or connect on GitHub or LinkedIn.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:cjdevault44@gmail.com">cjdevault44@gmail.com</a>
+            </li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/cjdevault" target="_blank" rel="noopener noreferrer"
+                >github.com/cjdevault</a
+              >
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/cjdevault" target="_blank" rel="noopener noreferrer"
+              >linkedin.com/in/cjdevault</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-branding">
+      <p class="brand-name">Christopher De Vault</p>
+      <p class="brand-line">B.S Computer Science, Minor in Philosophy</p>
+      <p class="brand-line">San Diego, CA</p>
+    </footer>
+
+    <button type="button" class="nav-arrow nav-arrow--prev" aria-label="Previous section">
+      <span aria-hidden="true"></span>
+    </button>
+    <button type="button" class="nav-arrow nav-arrow--next" aria-label="Next section">
+      <span aria-hidden="true"></span>
+    </button>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
