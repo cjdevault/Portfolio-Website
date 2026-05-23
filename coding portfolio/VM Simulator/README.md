@@ -1,10 +1,6 @@
 # Virtual Memory Simulator (vmsim)
 
-A demand-paging simulator for **CSc 452 — Operating Systems** that replays memory traces and compares four page-replacement policies under a fixed number of physical frames.
-
-**Course:** CSc 452 — Operating Systems  
-**Assignment:** Project 5 — Virtual Memory Simulator  
-**Author:** CJ De Vault
+A demand-paging simulator that replays memory traces and compares four page-replacement policies under a fixed number of physical frames.
 
 ---
 
@@ -199,12 +195,6 @@ Full tables for `ls.trace`, fault ratios, and write-back counts are in `REPORT_O
 - **Frame table:** Linear scan for resident lookup is sufficient for small frame counts used in grading.
 - **Modify (`M`):** Treated as one memory access that sets the dirty bit (read + write semantics).
 - **Disk writes:** Incremented only when evicting a **dirty** page (write-back model).
-
----
-
-## Academic integrity
-
-This project was completed for **CSc 452** at the University of Arizona. If you are a student in the same course, use this repository for reference only and follow your instructor’s collaboration and citation policies.
 
 ---
 
