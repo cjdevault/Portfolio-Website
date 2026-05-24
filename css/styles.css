@@ -201,13 +201,18 @@ body {
   display: block;
 }
 
-/* Projects panel — keep bottom border above site branding */
+/* About & projects panels — keep bottom border above site branding */
+.content-panel:has(#about.active),
 .content-panel:has(#projects.active) {
   transform: translate(-42%, -54%);
 }
 
+#about.panel,
 #projects.panel {
   max-height: min(400px, calc(100vh - 15rem));
+}
+
+#projects.panel {
   padding-bottom: 20px;
 }
 
