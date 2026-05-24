@@ -433,18 +433,29 @@ body.subpage.top-nav-backed .top-nav-link:hover {
   width: 100%;
 }
 
-/* Profile photo — floated top-left; border follows intrinsic aspect ratio */
-.profile-photo {
+/* Profile photos — floated top-left; border follows intrinsic aspect ratio */
+.profile-photos {
   float: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: var(--profile-photo-max);
+  margin: 0 20px 12px 0;
+}
+
+.profile-photo {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   max-width: var(--profile-photo-max);
   max-height: min(236px, 42vh);
-  margin: 0 20px 12px 0;
-  aspect-ratio: 461 / 836;
+  margin: 0;
   border: 2px solid rgba(255, 255, 255, 0.6);
   filter: none;
+}
+
+.profile-photos .profile-photo {
+  max-width: 100%;
 }
 
 .panel-heading {
@@ -1093,10 +1104,16 @@ body.subpage {
     --profile-photo-max: clamp(80px, 34vw, 108px);
   }
 
+  .profile-photos {
+    float: none;
+    max-width: var(--profile-photo-max);
+    margin: 0 auto 14px;
+  }
+
   .profile-photo {
     float: none;
     display: block;
-    margin: 0 auto 14px;
+    margin: 0 auto;
   }
 
   .panel-heading {
