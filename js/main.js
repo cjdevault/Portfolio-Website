@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const PANEL_ORDER = ["about", "skills", "projects", "contact"];
+  const PANEL_ORDER = ["about", "skills", "projects", "resume", "contact"];
 
   const navItems = document.querySelectorAll(".nav-item");
   const panels = document.querySelectorAll(".panel");

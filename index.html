@@ -21,20 +21,20 @@
       <div class="bg-slide active" data-panel="about"></div>
       <div class="bg-slide" data-panel="skills"></div>
       <div class="bg-slide" data-panel="projects"></div>
+      <div class="bg-slide" data-panel="resume"></div>
       <div class="bg-slide" data-panel="contact"></div>
     </div>
 
     <nav class="top-nav" aria-label="Personal navigation">
-      <a class="top-nav-link" href="pages/now.html">Now</a>
-      <a class="top-nav-link" href="pages/writing.html">Writing</a>
-      <a class="top-nav-link" href="pages/music.html">Music</a>
-      <a class="top-nav-link" href="pages/reading.html">Reading</a>
+      <a class="top-nav-link" href="pages/field-notes.html">Field Notes</a>
+      <a class="top-nav-link" href="pages/blog.html">Blog</a>
     </nav>
 
     <nav class="sidebar-nav" aria-label="Section navigation">
       <button type="button" class="nav-item active" data-panel="about">About</button>
       <button type="button" class="nav-item" data-panel="skills">Skills</button>
       <button type="button" class="nav-item" data-panel="projects">Projects</button>
+      <button type="button" class="nav-item" data-panel="resume">Resume</button>
       <button type="button" class="nav-item" data-panel="contact">Contact</button>
     </nav>
 
@@ -162,6 +162,135 @@
               <a href="coding portfolio/NLP Classification/README.md">README.md</a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="panel panel--resume" id="resume" data-panel="resume" aria-labelledby="resume-heading" hidden>
+        <div class="panel-body resume">
+          <h2 class="panel-heading" id="resume-heading">Resume</h2>
+
+          <p class="resume-contact">
+            San Diego, CA ·
+            <a href="tel:+16198952264">(619) 895-2264</a> ·
+            <a href="mailto:cjdevault44@gmail.com">cjdevault44@gmail.com</a> ·
+            <a href="https://www.linkedin.com/in/cjdevault" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+            <a href="https://github.com/cjdevault" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
+
+          <p class="resume-summary">
+            Recent B.S. Computer Science graduate with experience in machine learning, NLP, database systems,
+            systems programming, and data analysis. Skilled in Python, SQL, pandas, scikit-learn, and relational
+            database design with interests in analytics engineering and data-driven software systems.
+          </p>
+
+          <section class="resume-block" aria-labelledby="resume-education">
+            <h3 class="resume-section-title" id="resume-education">Education</h3>
+            <div class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">University of Arizona</span>
+                <span class="resume-entry-loc">Tucson, AZ</span>
+              </p>
+              <p class="resume-entry-detail">
+                Bachelor of Science in Computer Science, Minor in Philosophy — May 2026
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                Relevant coursework: Data Science, Database Design, Data Structures &amp; Algorithms, OS,
+                Systems Programming in C
+              </p>
+            </div>
+          </section>
+
+          <section class="resume-block" aria-labelledby="resume-skills">
+            <h3 class="resume-section-title" id="resume-skills">Technical Skills</h3>
+            <ul class="resume-skill-list">
+              <li><strong>Languages:</strong> Python, SQL, Java, C, Unix</li>
+              <li><strong>Data &amp; ML:</strong> pandas, NumPy, scikit-learn, Matplotlib, NLP, BERT, PCA, TF-IDF</li>
+              <li><strong>Databases &amp; analytics:</strong> Oracle SQL, JDBC, relational databases, data modeling</li>
+              <li><strong>Systems &amp; tools:</strong> Git, GitHub, Linux, Docker, Bash, UTM</li>
+              <li><strong>Concepts:</strong> Machine learning, data visualization, operating systems, systems programming, database design, testing</li>
+            </ul>
+          </section>
+
+          <section class="resume-block" aria-labelledby="resume-projects">
+            <h3 class="resume-section-title" id="resume-projects">Projects</h3>
+
+            <article class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">Large-Scale NLP Classification &amp; Feature Engineering Pipeline</span>
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                Python, pandas, scikit-learn, BERT, NLP
+              </p>
+              <ul>
+                <li>Built an end-to-end NLP classification pipeline to analyze ~20,000 labeled social media posts using TF-IDF vectorization and transformer embeddings.</li>
+                <li>Engineered high-dimensional feature representations using 768-dimensional BERT embeddings and PCA-based dimensionality reduction.</li>
+                <li>Trained and evaluated Logistic Regression and SVM classifiers, achieving approximately 0.80 weighted F1-score on unseen test data.</li>
+              </ul>
+            </article>
+
+            <article class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">Data Warehouse &amp; Relational Database Engineering Project</span>
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                Java, SQL, Oracle, JDBC, data modeling, Git
+              </p>
+              <ul>
+                <li>Designed and implemented a normalized Oracle relational database containing 15+ interconnected entities and complex business relationships.</li>
+                <li>Developed advanced analytical SQL queries using multi-table joins, aggregation, grouping, and filtering to generate operational insights.</li>
+                <li>Performed formal functional dependency analysis and normalization through BCNF to improve consistency and reduce redundancy.</li>
+              </ul>
+            </article>
+
+            <article class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">Virtual Memory Simulator &amp; Page Replacement Analysis</span>
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                Operating systems, C, Linux, performance analysis
+              </p>
+              <ul>
+                <li>Developed a virtual memory simulator implementing OPT, CLOCK, Rand, and NRU page replacement algorithms using configurable frame allocation and single-level page tables.</li>
+                <li>Analyzed over 2.4 million Valgrind memory trace accesses to benchmark page fault behavior, dirty page writebacks, and workload locality characteristics.</li>
+                <li>Conducted comparative performance analysis of replacement policies using quantitative metrics including fault ratios, disk-write frequency, and memory efficiency tradeoffs.</li>
+              </ul>
+            </article>
+
+            <article class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">Expression Parser &amp; Interpreter in Go</span>
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                Go, parsing, ASTs, compiler concepts
+              </p>
+              <ul>
+                <li>Built a custom arithmetic expression interpreter in Go featuring lexical analysis, parsing, AST generation, and expression evaluation.</li>
+                <li>Designed modular compiler-style components including tokenization, recursive descent parsing, and runtime execution logic.</li>
+                <li>Implemented REPL functionality and structured error handling for interactive expression evaluation.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="resume-block" aria-labelledby="resume-experience">
+            <h3 class="resume-section-title" id="resume-experience">Experience</h3>
+            <article class="resume-entry">
+              <p class="resume-entry-head">
+                <span class="resume-entry-org">Western Regional Collegiate Cyber Defense Competition (WRCCDC)</span>
+              </p>
+              <p class="resume-entry-detail resume-entry-detail--muted">
+                University of Arizona Cyber Saguaros
+              </p>
+              <ul>
+                <li>Represented the University of Arizona in a regional cybersecurity competition involving 27 universities.</li>
+                <li>Led inject response operations, producing technical reports and remediation plans accounting for approximately 50% of total team scoring.</li>
+                <li>Prioritized operational tasks under time pressure while maintaining system availability during active attacks.</li>
+              </ul>
+            </article>
+          </section>
+
+          <p class="resume-download">
+            <a href="assets/devaultResume2026v3.pdf" download>Download PDF</a>
+          </p>
         </div>
       </section>
 
