@@ -1,3 +1,4 @@
-## Personal Website 
-# Overview
+# Personal Website 
+## Overview
 This website hosts some basic information about me, contact info, hyperlinks to featured projects, and some more!
+Constantly being updated as I think of more fun stuff to add... 
