@@ -503,8 +503,6 @@ body.subpage {
   :root {
     --nav-width: 100%;
     --nav-item-height: var(--touch-min);
-    --panel-max-height: min(68vh, 560px);
-    --panel-max-height-short: min(62vh, 520px);
     --profile-photo-max: clamp(88px, 28vw, 120px);
     --page-gutter: clamp(0.875rem, 4vw, 1.25rem);
     --text-base: clamp(14px, 3.8vw, 15px);
@@ -534,7 +532,7 @@ body.subpage {
     min-height: 100dvh;
     padding: max(1rem, env(safe-area-inset-top))
       max(var(--page-gutter), env(safe-area-inset-right))
-      max(6rem, calc(4.5rem + env(safe-area-inset-bottom)))
+      max(1rem, env(safe-area-inset-bottom))
       max(var(--page-gutter), env(safe-area-inset-left));
   }
 
@@ -572,15 +570,18 @@ body.subpage {
     max-width: 640px;
     max-height: none;
     margin: 0 auto;
+    overflow: visible;
+    flex: 1 1 auto;
   }
 
   .panel {
-    max-height: var(--panel-max-height);
+    max-height: none;
+    overflow-y: visible;
   }
 
   #about.panel,
   #projects.panel {
-    max-height: var(--panel-max-height-short);
+    max-height: none;
   }
 
   .site-branding {
@@ -589,6 +590,7 @@ body.subpage {
     bottom: auto;
     margin-top: 1.5rem;
     text-align: center;
+    flex-shrink: 0;
   }
 
   .brand-name {
@@ -597,8 +599,13 @@ body.subpage {
   }
 
   .nav-arrows {
-    bottom: max(2rem, calc(1rem + env(safe-area-inset-bottom, 0px)));
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 1.25rem auto 0;
     gap: 2rem;
+    flex-shrink: 0;
   }
 
   .nav-arrow--prev span {
@@ -631,8 +638,6 @@ body.subpage {
 
 @media (max-width: 480px) {
   :root {
-    --panel-max-height: min(72vh, 520px);
-    --panel-max-height-short: min(66vh, 480px);
     --profile-photo-max: clamp(80px, 34vw, 108px);
   }
 
@@ -658,13 +663,7 @@ body.subpage {
 
 @media (max-width: 900px) and (max-height: 500px) {
   :root {
-    --panel-max-height: min(58vh, 360px);
-    --panel-max-height-short: min(52vh, 320px);
     --profile-photo-max: 72px;
-  }
-
-  body {
-    padding-bottom: max(4.5rem, calc(3.5rem + env(safe-area-inset-bottom)));
   }
 
   .site-branding {
