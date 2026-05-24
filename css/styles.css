@@ -26,7 +26,9 @@
   --panel-max-height: min(520px, calc(100vh - 10rem));
   --panel-max-height-short: min(400px, calc(100vh - 15rem));
   --profile-photo-max: clamp(96px, 22vw, 130px);
-  --content-width: min(640px, calc(100vw - var(--nav-width) - 8rem));
+  --sidebar-inset: 2.5rem;
+  --content-gap: 1.25rem;
+  --content-max-width: 640px;
   --page-gutter: clamp(1rem, 3vw, 2.5rem);
   --touch-min: 44px;
 }
@@ -199,10 +201,14 @@ body {
   position: fixed;
   z-index: 10;
   top: 50%;
-  left: 50%;
-  transform: translate(-42%, -50%);
-  width: var(--content-width);
+  left: calc(var(--sidebar-inset) + var(--nav-width) + var(--content-gap));
+  right: var(--sidebar-inset);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
   max-height: var(--panel-max-height);
+  transform: translateY(-50%);
   overflow: hidden;
 }
 
@@ -223,7 +229,7 @@ body {
 /* About & projects panels — keep bottom border above site branding */
 .content-panel:has(#about.active),
 .content-panel:has(#projects.active) {
-  transform: translate(-42%, -54%);
+  transform: translateY(-54%);
 }
 
 #about.panel,
@@ -371,13 +377,26 @@ body {
   opacity: 0.95;
 }
 
-/* Corner navigation arrows */
-.nav-arrow {
+/* Bottom-center navigation arrows */
+.nav-arrows {
   position: fixed;
-  bottom: 2rem;
+  bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
+  left: 50%;
   z-index: 20;
-  width: 0;
-  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  transform: translateX(-50%);
+}
+
+.nav-arrow {
+  position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   border: none;
   background: transparent;
@@ -396,16 +415,6 @@ body {
   opacity: 0.25;
   cursor: default;
   transform: none;
-}
-
-.nav-arrow--prev {
-  left: 2rem;
-  bottom: 1.25rem;
-}
-
-.nav-arrow--next {
-  right: 2rem;
-  bottom: 1.25rem;
 }
 
 .nav-arrow span {
@@ -497,7 +506,6 @@ body.subpage {
     --panel-max-height: min(68vh, 560px);
     --panel-max-height-short: min(62vh, 520px);
     --profile-photo-max: clamp(88px, 28vw, 120px);
-    --content-width: 100%;
     --page-gutter: clamp(0.875rem, 4vw, 1.25rem);
     --text-base: clamp(14px, 3.8vw, 15px);
     --text-nav: clamp(13px, 3.4vw, 14px);
@@ -558,6 +566,7 @@ body.subpage {
     position: relative;
     top: auto;
     left: auto;
+    right: auto;
     transform: none !important;
     width: 100%;
     max-width: 640px;
@@ -587,22 +596,9 @@ body.subpage {
     letter-spacing: 0.04em;
   }
 
-  .nav-arrow {
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    min-width: var(--touch-min);
-    min-height: var(--touch-min);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-arrow--prev {
-    left: max(1rem, env(safe-area-inset-left));
-    bottom: max(1rem, env(safe-area-inset-bottom));
-  }
-
-  .nav-arrow--next {
-    right: max(1rem, env(safe-area-inset-right));
+  .nav-arrows {
+    bottom: max(2rem, calc(1rem + env(safe-area-inset-bottom, 0px)));
+    gap: 2rem;
   }
 
   .nav-arrow--prev span {
