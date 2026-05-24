@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Christopher De Vault | Blog</title>
+    <title>Blog | Christopher De Vault</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,11 +20,77 @@
       <a class="top-nav-link" href="blog.html">Blog</a>
     </nav>
 
-    <main class="placeholder-main">
-      <h1>Blog</h1>
-      <p>Writing on computer science, philosophy, and whatever else I find interesting.</p>
-      <p>Coming soon.</p>
+    <main class="blog-main">
+      <header class="blog-header">
+        <h1>Blog</h1>
+        <p>Writing on computer science, philosophy, and whatever else I find interesting.</p>
+      </header>
+
+      <div class="blog-posts">
+        <article class="blog-post blog-post--collection" id="post-modern-philosophy">
+          <button
+            type="button"
+            class="blog-post-toggle"
+            aria-expanded="false"
+            aria-controls="post-modern-philosophy-body"
+          >
+            <span class="blog-post-title">Two Papers on Modern Philosophy</span>
+            <span class="blog-post-meta">PHIL 262 · Philosophy · University of Arizona</span>
+          </button>
+
+          <div class="blog-post-body" id="post-modern-philosophy-body" hidden>
+            <div class="blog-post-intro">
+              <p>
+                These two papers were written for PHIL 262: Modern Philosophy. The first examines
+                Locke’s account of personal identity; the second explores Hume’s compatibilist
+                view of freedom and causal necessity.
+              </p>
+              <p>
+                [Intro placeholder — lorem ipsum dolor sit amet, consectetur adipiscing elit.] 
+              </p>
+            </div>
+
+            <div class="blog-papers">
+              <section
+                class="blog-paper"
+                data-src="../blog-content/posts/personal-identity.html"
+              >
+                <button
+                  type="button"
+                  class="blog-paper-toggle"
+                  aria-expanded="false"
+                  aria-controls="paper-personal-identity"
+                >
+                  <span class="blog-paper-title">Personal Identity and Continuation of Consciousness</span>
+                  <span class="blog-paper-meta">October 20, 2023</span>
+                </button>
+                <div class="blog-paper-body" id="paper-personal-identity" hidden></div>
+              </section>
+
+              <section
+                class="blog-paper"
+                data-src="../blog-content/posts/freedom-and-necessity.html"
+              >
+                <button
+                  type="button"
+                  class="blog-paper-toggle"
+                  aria-expanded="false"
+                  aria-controls="paper-freedom-necessity"
+                >
+                  <span class="blog-paper-title">Compatibility of Freedom and Causal Necessity</span>
+                  <span class="blog-paper-meta">November 30, 2023</span>
+                </button>
+                <div class="blog-paper-body" id="paper-freedom-necessity" hidden></div>
+              </section>
+            </div>
+          </div>
+        </article>
+      </div>
+
       <a class="placeholder-back" href="../index.html">← Portfolio</a>
     </main>
+
+    <script src="../js/subpage-nav.js" defer></script>
+    <script src="../js/blog.js" defer></script>
   </body>
 </html>
